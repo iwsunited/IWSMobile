@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--kalau mau ganti font disini-->
+
+    <style name="iws.SmallBanget" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Small" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Medium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="iws.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>
