@@ -45,6 +45,12 @@ public class LoginActivity extends AppCompatActivity {
         onClick();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     private void initView(){
         pd = new ProgressDialog(this);
         pd.setMessage(getString(R.string.loading));
@@ -95,11 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                login();
-
-                //khusus tampilan aja
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                login();
             }
         });
     }
@@ -136,6 +138,10 @@ public class LoginActivity extends AppCompatActivity {
                         String nama = hasil.getJSONArray("data").getJSONObject(0).getString("member_nama");
                         Toast.makeText(LoginActivity.this, "Selamat datang " + nama, Toast.LENGTH_SHORT).show();
                         pd.dismiss();
+
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(LoginActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();
                         pd.dismiss();
