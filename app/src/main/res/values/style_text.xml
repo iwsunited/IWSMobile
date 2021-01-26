@@ -2,6 +2,11 @@
 <resources>
     <!--kalau mau ganti font disini-->
 
+    <style name="iws.AngkaNotif" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">6sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
     <style name="iws.SmallBanget" parent="TextAppearance.AppCompat.Small">
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">@android:color/black</item>

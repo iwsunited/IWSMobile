@@ -57,11 +57,11 @@ public class LoginActivity extends AppCompatActivity {
         tvLink = findViewById(R.id.tv_login_link);
 
         Glide.with(this)
-                .load(getDrawable(R.drawable.img_logo_google))
+                .load(getDrawable(R.drawable.img_splash))
                 .into(imgLogo);
 
         Glide.with(this)
-                .load(getDrawable(R.drawable.img_logo_google))
+                .load(getDrawable(R.drawable.bg_login))
                 .into(imgBackground);
 
         edtId.setFilters(new InputFilter[]{new InputFilter.AllCaps()});

@@ -25,9 +25,9 @@ public class SplashActivity extends AppCompatActivity {
         img = findViewById(R.id.img_splash);
         tv = findViewById(R.id.tv_splash);
 
-        Glide.with(this)
-                .load(getDrawable(R.drawable.img_logo_google))
-                .into(img);
+//        Glide.with(this)
+//                .load(getDrawable(R.drawable.img_logo_google))
+//                .into(img);
 
         tv.setText("Version " + BuildConfig.VERSION_NAME);
 
