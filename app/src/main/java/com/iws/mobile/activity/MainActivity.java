@@ -1,23 +1,31 @@
 package com.iws.mobile.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
-import com.google.android.material.tabs.TabLayout;
 import com.iws.mobile.R;
-import com.iws.mobile.adapter.FragPagerAdapter;
+import com.iws.mobile.fragment.BerandaFragment;
+import com.iws.mobile.fragment.BonusFragment;
+import com.iws.mobile.fragment.JaringanFragment;
+import com.iws.mobile.fragment.ProfilFragment;
+import com.iws.mobile.fragment.SettingFragment;
+import com.iws.mobile.fragment.ShopFragment;
 
 public class MainActivity extends AppCompatActivity {
+    ConstraintLayout clBarBotBeranda, clBarBotShop, clBarBotBonus, clBarBotJaringan, clBarBotSetting, clBarBotProfil;
+    ConstraintLayout clBarTopSetting, clBarTopCart, clBarTopNotif, clBarTopAkun, clBarTopLogout;
+    TextView tvBallTopCart, tvBallTopNotif, tvTopBallAkun;
+    TextView tvBallBotShop, tvBallBotBonus, tvBallBotJaringan;
+    ConstraintLayout clBallContainerBotShop, clBallContainerBotBonus, clBallContainerBotJaringan;
+    ConstraintLayout clBallContainerTopCart, clBallContainerTopNotif, clBallContainerTopAkun;
 
-    TabLayout tabLayout;
-    ViewPager viewPager;
+    Fragment fragBeranda, fragShop, fragBonus, fragJaringan, fragSetting, fragProfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,36 +33,122 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initView();
-        setTabLayout();
+        onClick();
+        setFlContainer();
     }
 
     private void initView(){
-        tabLayout = findViewById(R.id.tl_main);
-        viewPager = findViewById(R.id.vp_main);
+        clBarBotBeranda = findViewById(R.id.cl_navbar_bot_beranda);
+        clBarBotShop = findViewById(R.id.cl_navbar_bot_shop);
+        clBarBotBonus = findViewById(R.id.cl_navbar_bot_bonus);
+        clBarBotJaringan = findViewById(R.id.cl_navbar_bot_jaringan);
+        clBarBotSetting = findViewById(R.id.cl_navbar_bot_setting);
+        clBarBotProfil = findViewById(R.id.cl_navbar_bot_profil);
+        clBarTopSetting = findViewById(R.id.cl_navbar_top_setting);
+        clBarTopCart = findViewById(R.id.cl_navbar_top_cart);
+        clBarTopNotif = findViewById(R.id.cl_navbar_top_notif);
+        clBarTopAkun = findViewById(R.id.cl_navbar_top_akun);
+        clBarTopLogout = findViewById(R.id.cl_navbar_top_logout);
+
+        tvBallTopCart = findViewById(R.id.tv_navbar_top_angka_cart);
+        tvBallTopNotif = findViewById(R.id.tv_navbar_top_angka_notif);
+        tvTopBallAkun = findViewById(R.id.tv_navbar_top_angka_akun);
+        tvBallBotShop = findViewById(R.id.tv_navbar_bot_angka_shop);
+        tvBallBotBonus = findViewById(R.id.tv_navbar_bot_angka_bonus);
+        tvBallBotJaringan = findViewById(R.id.tv_navbar_bot_angka_jaringan);
+
+        clBallContainerBotShop = findViewById(R.id.cl_navbar_bot_ball_shop);
+        clBallContainerBotBonus = findViewById(R.id.cl_navbar_bot_ball_bonus);
+        clBallContainerBotJaringan = findViewById(R.id.cl_navbar_bot_ball_jaringan);
+        clBallContainerTopCart = findViewById(R.id.cl_navbar_top_ball_cart);
+        clBallContainerTopNotif = findViewById(R.id.cl_navbar_top_ball_notif);
+        clBallContainerTopAkun = findViewById(R.id.cl_navbar_top_ball_akun);
+
+        fragBeranda = new BerandaFragment();
+        fragShop = new ShopFragment();
+        fragBonus = new BonusFragment();
+        fragJaringan = new JaringanFragment();
+        fragSetting = new SettingFragment();
+        fragProfil = new ProfilFragment();
     }
 
-    private void setTabLayout(){
-        int[] arrayDrawable = {R.drawable.ic_account_circle,
-                R.drawable.ic_account_circle,
-                R.drawable.ic_account_circle,
-                R.drawable.ic_account_circle,
-                R.drawable.ic_account_circle,
-                R.drawable.ic_account_circle};
+    private void setFlContainer(){
+        //langsung ke beranda
+        loadFragment(new BerandaFragment());
+    }
 
-        FragPagerAdapter adapter = new FragPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager);
-        for (int i = 0; i < arrayDrawable.length; i++){
-            tabLayout.getTabAt(i).setIcon(arrayDrawable[i]);
-        }
+    private void loadFragment(Fragment fragment){
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fl_main, fragment);
+        ft.commit();
+    }
 
-//        viewPager.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                return true;
-//            }
-//        });
+    private void onClick(){
+        clBarBotBeranda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(fragBeranda);
+            }
+        });
+        clBarBotShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(fragShop);
+            }
+        });
+        clBarBotBonus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(fragBonus);
+            }
+        });
+        clBarBotJaringan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(fragJaringan);
+            }
+        });
+        clBarBotSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(fragSetting);
+            }
+        });
+        clBarBotProfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(fragProfil);
+            }
+        });
+        clBarTopSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //belum
+            }
+        });
+        clBarTopCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //belum
+            }
+        });
+        clBarTopNotif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //belum
+            }
+        });
+        clBarTopAkun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //belum
+            }
+        });
+        clBarTopLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-//        viewPager.onInterceptTouchEvent(new View.OnInter)
+            }
+        });
     }
 }
