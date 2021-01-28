@@ -236,7 +236,7 @@
 
                     <TextView
                         android:id="@+id/textView4"
-                        style="@style/iws.SmallBanget"
+                        style="@style/iws.Small3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
