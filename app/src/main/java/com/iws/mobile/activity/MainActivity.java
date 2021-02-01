@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.iws.mobile.R;
@@ -21,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout clBarBotBeranda, clBarBotShop, clBarBotBonus, clBarBotJaringan, clBarBotSetting, clBarBotProfil;
     ConstraintLayout clBarTopSetting, clBarTopCart, clBarTopNotif, clBarTopAkun, clBarTopLogout;
     TextView tvBallTopCart, tvBallTopNotif, tvTopBallAkun;
-    TextView tvBallBotShop, tvBallBotBonus, tvBallBotJaringan;
-    ConstraintLayout clBallContainerBotShop, clBallContainerBotBonus, clBallContainerBotJaringan;
     ConstraintLayout clBallContainerTopCart, clBallContainerTopNotif, clBallContainerTopAkun;
+
+    ImageView imgBarBotBeranda, imgBarBotShop, imgBarBotBonus, imgBarBotJaringan, imgBarBotSetting, imgBarBotProfil;
 
     Fragment fragBeranda, fragShop, fragBonus, fragJaringan, fragSetting, fragProfil;
 
@@ -53,13 +54,7 @@ public class MainActivity extends AppCompatActivity {
         tvBallTopCart = findViewById(R.id.tv_navbar_top_angka_cart);
         tvBallTopNotif = findViewById(R.id.tv_navbar_top_angka_notif);
         tvTopBallAkun = findViewById(R.id.tv_navbar_top_angka_akun);
-        tvBallBotShop = findViewById(R.id.tv_navbar_bot_angka_shop);
-        tvBallBotBonus = findViewById(R.id.tv_navbar_bot_angka_bonus);
-        tvBallBotJaringan = findViewById(R.id.tv_navbar_bot_angka_jaringan);
 
-        clBallContainerBotShop = findViewById(R.id.cl_navbar_bot_ball_shop);
-        clBallContainerBotBonus = findViewById(R.id.cl_navbar_bot_ball_bonus);
-        clBallContainerBotJaringan = findViewById(R.id.cl_navbar_bot_ball_jaringan);
         clBallContainerTopCart = findViewById(R.id.cl_navbar_top_ball_cart);
         clBallContainerTopNotif = findViewById(R.id.cl_navbar_top_ball_notif);
         clBallContainerTopAkun = findViewById(R.id.cl_navbar_top_ball_akun);

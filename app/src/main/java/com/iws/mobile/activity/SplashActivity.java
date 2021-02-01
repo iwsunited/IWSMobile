@@ -35,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                boolean loggedin = false;
+                boolean loggedin = true;
                 Intent intent;
 
                 if (loggedin){

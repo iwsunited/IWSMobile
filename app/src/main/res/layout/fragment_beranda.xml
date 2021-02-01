@@ -24,23 +24,15 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_container1"
                 android:layout_width="match_parent"
-                android:layout_height="192dp"
+                android:layout_height="wrap_content"
+                android:minHeight="192dp"
                 android:background="@color/kuningmuda"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/imageView14"
-                    android:layout_width="88dp"
-                    android:layout_height="88dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/bg_bg_round_profilpic"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider_beranda_top"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:visibility="visible"
@@ -61,6 +53,16 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/dash_silver"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/bg_bg_round_profilpic"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -146,7 +148,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_beranda_container"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@+id/cl_container2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
@@ -244,10 +246,10 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_dash_bonus"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/ic_dash_bonus" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
@@ -340,7 +342,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -388,7 +390,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -436,7 +438,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -484,7 +486,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -532,7 +534,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -577,7 +579,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -623,7 +625,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -668,7 +670,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -713,7 +715,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -759,7 +761,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_dash_notifbintang"
+                        android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -805,13 +807,15 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
-                android:layout_height="280dp"
+                android:layout_height="wrap_content"
                 android:background="@color/kuningmuda"
+                android:minHeight="192dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout20">
 
                 <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider_beranda_bot"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:visibility="visible"

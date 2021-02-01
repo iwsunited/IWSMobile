@@ -9,58 +9,68 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iws.mobile.R;
+import com.iws.mobile.adapter.BerandaSliderBotAdapter;
+import com.iws.mobile.adapter.BerandaSliderTopAdapter;
+import com.iws.mobile.model.SliderItem;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BerandaFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
 public class BerandaFragment extends Fragment {
+//    ArrayList<SliderItem> sliderItemsTop, sliderItemsBot;
+    SliderView sliderTop, sliderBot;
+    BerandaSliderTopAdapter adapterTop;
+    BerandaSliderBotAdapter adapterBot;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    View root;
 
     public BerandaFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BerandaFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static BerandaFragment newInstance(String param1, String param2) {
-        BerandaFragment fragment = new BerandaFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_beranda, container, false);
+        root = inflater.inflate(R.layout.fragment_beranda, container, false);
+
+        sliderTop = root.findViewById(R.id.slider_beranda_top);
+        sliderBot = root.findViewById(R.id.slider_beranda_bot);
+
+//        sliderItemsTop = new ArrayList<>();
+//        sliderItemsBot = new ArrayList<>();
+
+        adapterTop = new BerandaSliderTopAdapter(root.getContext());
+        adapterBot = new BerandaSliderBotAdapter(root.getContext());
+
+        setSlider();
+
+        return root;
+    }
+
+    private void setSlider(){
+
+//        adapterTop.addItem(new SliderItem("https://img.okezone.com/content/2021/01/18/46/2346166/dikartu-merah-berapa-lama-lionel-messi-bakal-absen-ris8ED8yjX.JPG"));
+//        adapterTop.addItem(new SliderItem("https://img.okezone.com/content/2021/01/18/46/2346166/dikartu-merah-berapa-lama-lionel-messi-bakal-absen-ris8ED8yjX.JPG"));
+//        adapterTop.addItem(new SliderItem("https://img.okezone.com/content/2021/01/18/46/2346166/dikartu-merah-berapa-lama-lionel-messi-bakal-absen-ris8ED8yjX.JPG"));
+
+        adapterTop.addItem(new SliderItem(R.drawable.slider_test_1));
+        adapterTop.addItem(new SliderItem(R.drawable.slider_test_2));
+        adapterTop.addItem(new SliderItem(R.drawable.slider_test_3));
+        sliderTop.setSliderAdapter(adapterTop);
+        sliderTop.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderTop.setScrollTimeInSec(4);
+        sliderTop.setAutoCycle(true);
+        sliderTop.startAutoCycle();
+
+        adapterBot.addItem(new SliderItem(R.drawable.slider_test_1));
+        adapterBot.addItem(new SliderItem(R.drawable.slider_test_2));
+        adapterBot.addItem(new SliderItem(R.drawable.slider_test_3));
+        sliderBot.setSliderAdapter(adapterBot);
+        sliderBot.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderBot.setScrollTimeInSec(4);
+        sliderBot.setAutoCycle(true);
+        sliderBot.startAutoCycle();
     }
 }
