@@ -5,4 +5,6 @@
 
     <dimen name="custom_tab_icon_width">28dp</dimen>
     <dimen name="custom_tab_icon_heigth">28dp</dimen>
+
+    <dimen name="btn_height">36dp</dimen>
 </resources>
