@@ -2,65 +2,78 @@ package com.iws.mobile.fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 import com.iws.mobile.R;
+import com.iws.mobile.adapter.ShopAdapter;
+import com.iws.mobile.model.ShopItem;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ShopFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
 public class ShopFragment extends Fragment {
+    RecyclerView rv;
+    ShopAdapter adapter;
+    ArrayList<ShopItem> items;
+    ScrollView sv;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    View v;
 
     public ShopFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ShopFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ShopFragment newInstance(String param1, String param2) {
-        ShopFragment fragment = new ShopFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop, container, false);
+        v =  inflater.inflate(R.layout.fragment_shop, container, false);
+        rv = v.findViewById(R.id.rv_shop);
+        items = new ArrayList<>();
+        sv = v.findViewById(R.id.sv_shop);
+        sv.setNestedScrollingEnabled(false);
+        rv.setNestedScrollingEnabled(false);
+
+        setRecylerView();
+        return v;
+    }
+
+    private void setRecylerView(){
+        adapter = new ShopAdapter(v.getContext(), items);
+        rv.setLayoutManager(new GridLayoutManager(v.getContext(), 2));
+        rv.setAdapter(adapter);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getData();
+    }
+
+    private void getData(){
+        String url = "https://images.theconversation.com/files/93616/original/image-20150902-6700-t2axrz.jpg";
+        items.add(new ShopItem("001", "nama 1", "caption 1", "500 bv", url, 4404000, true, true));
+        items.add(new ShopItem("002", "nama 2", "caption 2", "400 bv", url, 1050000, true, false));
+        items.add(new ShopItem("003", "nama 3", "caption 3", "5500 bv", url, 4500000, false, true));
+        items.add(new ShopItem("004", "nama 4", "caption 4", "800 bv", url, 1000000, false, false));
+        items.add(new ShopItem("002", "nama 2", "caption 2", "400 bv", url, 1050000, true, false));
+        items.add(new ShopItem("003", "nama 3", "caption 3", "5500 bv", url, 4500000, false, true));
+
+        ShopAdapter adapter = new ShopAdapter(v.getContext(), items);
+        rv.setAdapter(adapter);
     }
 }

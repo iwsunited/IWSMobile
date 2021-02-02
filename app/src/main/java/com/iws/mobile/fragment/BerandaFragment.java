@@ -15,15 +15,13 @@ import com.iws.mobile.model.SliderItem;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-import java.util.ArrayList;
-
 public class BerandaFragment extends Fragment {
 //    ArrayList<SliderItem> sliderItemsTop, sliderItemsBot;
     SliderView sliderTop, sliderBot;
     BerandaSliderTopAdapter adapterTop;
     BerandaSliderBotAdapter adapterBot;
 
-    View root;
+    View v;
 
     public BerandaFragment() {
         // Required empty public constructor
@@ -33,20 +31,20 @@ public class BerandaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        root = inflater.inflate(R.layout.fragment_beranda, container, false);
+        v = inflater.inflate(R.layout.fragment_beranda, container, false);
 
-        sliderTop = root.findViewById(R.id.slider_beranda_top);
-        sliderBot = root.findViewById(R.id.slider_beranda_bot);
+        sliderTop = v.findViewById(R.id.slider_beranda_top);
+        sliderBot = v.findViewById(R.id.slider_beranda_bot);
 
 //        sliderItemsTop = new ArrayList<>();
 //        sliderItemsBot = new ArrayList<>();
 
-        adapterTop = new BerandaSliderTopAdapter(root.getContext());
-        adapterBot = new BerandaSliderBotAdapter(root.getContext());
+        adapterTop = new BerandaSliderTopAdapter(v.getContext());
+        adapterBot = new BerandaSliderBotAdapter(v.getContext());
 
         setSlider();
 
-        return root;
+        return v;
     }
 
     private void setSlider(){
