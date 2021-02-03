@@ -810,9 +810,11 @@
                 android:layout_height="wrap_content"
                 android:background="@color/kuningmuda"
                 android:minHeight="192dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout20">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout20"
+                app:layout_constraintVertical_bias="0.0">
 
                 <com.smarteist.autoimageslider.SliderView
                     android:id="@+id/slider_beranda_bot"
