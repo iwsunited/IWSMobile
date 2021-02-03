@@ -1,6 +1,7 @@
 package com.iws.mobile.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.iws.mobile.R;
+import com.iws.mobile.activity.DetailBarangActivity;
 import com.iws.mobile.model.ShopItem;
 
 import java.util.ArrayList;
@@ -63,6 +65,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 //do nothing
+                Intent intent = new Intent(context, DetailBarangActivity.class);
+                context.startActivity(intent);
             }
         });
     }
