@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/nav_bar_top"
+        layout="@layout/nav_main_top"
         android:layout_width="match_parent"
         android:layout_height="@dimen/navbar_height"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +17,7 @@
 
     <include
         android:id="@+id/include2"
-        layout="@layout/nav_bar_bottom"
+        layout="@layout/nav_main_bottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/navbar_height"
         app:layout_constraintBottom_toBottomOf="parent"
