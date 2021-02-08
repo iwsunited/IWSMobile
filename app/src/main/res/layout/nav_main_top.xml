@@ -10,7 +10,6 @@
         android:id="@+id/cl_navbar_top_setting"
         android:layout_width="@dimen/navbar_width"
         android:layout_height="@dimen/navbar_height"
-        android:background="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cl_navbar_top_cart"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +37,6 @@
         android:id="@+id/cl_navbar_top_cart"
         android:layout_width="@dimen/navbar_width"
         android:layout_height="@dimen/navbar_height"
-        android:background="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cl_navbar_top_notif"
         app:layout_constraintTop_toTopOf="parent"
@@ -92,7 +90,6 @@
         android:id="@+id/cl_navbar_top_notif"
         android:layout_width="@dimen/navbar_width"
         android:layout_height="@dimen/navbar_height"
-        android:background="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cl_navbar_top_akun"
         app:layout_constraintTop_toTopOf="parent">
@@ -145,7 +142,6 @@
         android:id="@+id/cl_navbar_top_akun"
         android:layout_width="@dimen/navbar_width"
         android:layout_height="@dimen/navbar_height"
-        android:background="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cl_navbar_top_logout"
         app:layout_constraintTop_toTopOf="parent">
@@ -199,7 +195,6 @@
         android:layout_width="@dimen/navbar_width"
         android:layout_height="@dimen/navbar_height"
         android:layout_marginEnd="4dp"
-        android:background="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">

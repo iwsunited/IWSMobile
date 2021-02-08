@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setFlContainer();
     }
 
-    private void initView(){
+    private void initView() {
         clBarBotBeranda = findViewById(R.id.cl_navbar_bot_beranda);
         clBarBotShop = findViewById(R.id.cl_navbar_bot_shop);
         clBarBotBonus = findViewById(R.id.cl_navbar_bot_bonus);
@@ -67,18 +68,18 @@ public class MainActivity extends AppCompatActivity {
         fragProfil = new ProfilFragment();
     }
 
-    private void setFlContainer(){
+    private void setFlContainer() {
         //langsung ke beranda
         loadFragment(new BerandaFragment());
     }
 
-    private void loadFragment(Fragment fragment){
+    private void loadFragment(Fragment fragment) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fl_main, fragment);
         ft.commit();
     }
 
-    private void onClick(){
+    private void onClick() {
         clBarBotBeranda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
         clBarBotJaringan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadFragment(fragJaringan);
+                Intent intent = new Intent(MainActivity.this, DiagramJaringanActivity.class);
+                startActivity(intent);
             }
         });
         clBarBotSetting.setOnClickListener(new View.OnClickListener() {
@@ -142,7 +144,9 @@ public class MainActivity extends AppCompatActivity {
         clBarTopLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
     }
