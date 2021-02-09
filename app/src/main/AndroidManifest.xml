@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IWSMobile">
-        <activity android:name=".activity.KeranjangActivity"></activity>
+        <activity android:name=".activity.PembayaranActivity"></activity>
+        <activity android:name=".activity.KeranjangActivity" />
         <activity android:name=".activity.DiagramJaringanActivity" />
         <activity android:name=".activity.DetailBarangActivity" />
         <activity
