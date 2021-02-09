@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         clBarBotBonus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadFragment(fragBonus);
+//                loadFragment(fragBonus);
             }
         });
         clBarBotJaringan.setOnClickListener(new View.OnClickListener() {
@@ -108,13 +108,13 @@ public class MainActivity extends AppCompatActivity {
         clBarBotSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadFragment(fragSetting);
+//                loadFragment(fragSetting);
             }
         });
         clBarBotProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadFragment(fragProfil);
+//                loadFragment(fragProfil);
             }
         });
         clBarTopSetting.setOnClickListener(new View.OnClickListener() {
@@ -146,6 +146,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+        clBarTopCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, KeranjangActivity.class);
                 startActivity(intent);
             }
         });
