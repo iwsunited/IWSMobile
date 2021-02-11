@@ -306,7 +306,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout15"
+                    app:layout_constraintEnd_toStartOf="@+id/cl_beranda_pertjaringan"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
 
@@ -450,7 +450,7 @@
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/constraintLayout18"
-                    app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
+                    app:layout_constraintStart_toEndOf="@+id/cl_beranda_pertjaringan"
                     app:layout_constraintTop_toTopOf="@+id/constraintLayout16"
                     app:layout_constraintVertical_bias="0.0">
 
@@ -492,7 +492,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout15"
+                    android:id="@+id/cl_beranda_pertjaringan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"

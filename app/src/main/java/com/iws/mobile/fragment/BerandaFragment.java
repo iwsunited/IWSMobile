@@ -1,7 +1,9 @@
 package com.iws.mobile.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iws.mobile.R;
+import com.iws.mobile.activity.PertumbuhanJaringanActivity;
 import com.iws.mobile.adapter.BerandaSliderBotAdapter;
 import com.iws.mobile.adapter.BerandaSliderTopAdapter;
 import com.iws.mobile.model.SliderItem;
@@ -22,6 +25,8 @@ public class BerandaFragment extends Fragment {
     BerandaSliderBotAdapter adapterBot;
 
     View v;
+
+    ConstraintLayout clPertJaringan;
 
     public BerandaFragment() {
         // Required empty public constructor
@@ -43,6 +48,15 @@ public class BerandaFragment extends Fragment {
         adapterBot = new BerandaSliderBotAdapter(v.getContext());
 
         setSlider();
+
+        clPertJaringan = v.findViewById(R.id.cl_beranda_pertjaringan);
+        clPertJaringan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), PertumbuhanJaringanActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return v;
     }
