@@ -95,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
         clBarBotBonus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                loadFragment(fragBonus);
+                Intent intent = new Intent(MainActivity.this, BonusActivity.class);
+                startActivity(intent);
             }
         });
         clBarBotJaringan.setOnClickListener(new View.OnClickListener() {

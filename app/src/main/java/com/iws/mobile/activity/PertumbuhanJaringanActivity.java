@@ -23,7 +23,7 @@ public class PertumbuhanJaringanActivity extends AppCompatActivity {
         tvNav = findViewById(R.id.tv_navbar_other);
         tvNav.setText("Pertumbuhan Jaringan");
 
-        tvPanahBack = findViewById(R.id.tv_pertjaringan_panahback);
+        tvPanahBack = findViewById(R.id.tv_pertjaringan_pageback);
         tvPanahBack.setText("<");
 
         tableLayout = findViewById(R.id.tl_pertjaringan);

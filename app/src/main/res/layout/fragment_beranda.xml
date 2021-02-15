@@ -300,7 +300,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/cl_container2">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout16"
+                    android:id="@+id/cl_beranda_diagjaringan"
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="8dp"
@@ -355,7 +355,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/constraintLayout18"
-                    app:layout_constraintTop_toTopOf="@+id/constraintLayout16"
+                    app:layout_constraintTop_toTopOf="@+id/cl_beranda_diagjaringan"
                     app:layout_constraintVertical_bias="0.0">
 
                     <ImageView
@@ -403,7 +403,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/constraintLayout19"
                     app:layout_constraintStart_toEndOf="@+id/constraintLayout17"
-                    app:layout_constraintTop_toTopOf="@+id/constraintLayout16"
+                    app:layout_constraintTop_toTopOf="@+id/cl_beranda_diagjaringan"
                     app:layout_constraintVertical_bias="0.0">
 
                     <ImageView
@@ -451,7 +451,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/constraintLayout18"
                     app:layout_constraintStart_toEndOf="@+id/cl_beranda_pertjaringan"
-                    app:layout_constraintTop_toTopOf="@+id/constraintLayout16"
+                    app:layout_constraintTop_toTopOf="@+id/cl_beranda_diagjaringan"
                     app:layout_constraintVertical_bias="0.0">
 
                     <ImageView
@@ -498,8 +498,8 @@
                     android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/constraintLayout17"
-                    app:layout_constraintStart_toEndOf="@+id/constraintLayout16"
-                    app:layout_constraintTop_toTopOf="@+id/constraintLayout16">
+                    app:layout_constraintStart_toEndOf="@+id/cl_beranda_diagjaringan"
+                    app:layout_constraintTop_toTopOf="@+id/cl_beranda_diagjaringan">
 
                     <ImageView
                         android:id="@+id/imageView26"

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iws.mobile.R;
+import com.iws.mobile.activity.DiagramJaringanActivity;
 import com.iws.mobile.activity.PertumbuhanJaringanActivity;
 import com.iws.mobile.adapter.BerandaSliderBotAdapter;
 import com.iws.mobile.adapter.BerandaSliderTopAdapter;
@@ -26,7 +27,7 @@ public class BerandaFragment extends Fragment {
 
     View v;
 
-    ConstraintLayout clPertJaringan;
+    ConstraintLayout clPertJaringan, clDiagJaringan;
 
     public BerandaFragment() {
         // Required empty public constructor
@@ -54,6 +55,15 @@ public class BerandaFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), PertumbuhanJaringanActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        clDiagJaringan = v.findViewById(R.id.cl_beranda_diagjaringan);
+        clDiagJaringan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), DiagramJaringanActivity.class);
                 startActivity(intent);
             }
         });
