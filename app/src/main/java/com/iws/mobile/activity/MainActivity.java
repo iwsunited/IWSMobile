@@ -1,5 +1,6 @@
 package com.iws.mobile.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -7,10 +8,17 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+import com.iws.mobile.CommonMethod;
 import com.iws.mobile.R;
 import com.iws.mobile.fragment.BerandaFragment;
 import com.iws.mobile.fragment.BonusFragment;
@@ -19,7 +27,13 @@ import com.iws.mobile.fragment.ProfilFragment;
 import com.iws.mobile.fragment.SettingFragment;
 import com.iws.mobile.fragment.ShopFragment;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "ganteng";
+    
     ConstraintLayout clBarBotBeranda, clBarBotShop, clBarBotBonus, clBarBotJaringan, clBarBotSetting, clBarBotProfil;
     ConstraintLayout clBarTopSetting, clBarTopCart, clBarTopNotif, clBarTopAkun, clBarTopLogout;
     TextView tvBallTopCart, tvBallTopNotif, tvTopBallAkun;
@@ -37,6 +51,33 @@ public class MainActivity extends AppCompatActivity {
         initView();
         onClick();
         setFlContainer();
+        setToken();
+    }
+
+    private void setToken(){
+        Log.d(TAG, "setToken: jalan");
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        Log.d(TAG, "onComplete: jalan");
+                        String token = task.getResult().getToken();
+                        Log.d(TAG, "onComplete: token : " + token);
+
+                        Call<Void> call = CommonMethod.getJsonApi_test().settoken(token);
+                        call.enqueue(new Callback<Void>() {
+                            @Override
+                            public void onResponse(Call<Void> call, Response<Void> response) {
+                                Log.d(TAG, "onResponse: jalan token : " + token);
+                            }
+
+                            @Override
+                            public void onFailure(Call<Void> call, Throwable t) {
+                                Log.d(TAG, "onFailure: jalan message : " + t.getMessage());
+                            }
+                        });
+                    }
+                });
     }
 
     private void initView() {

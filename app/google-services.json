@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47736175417",
+    "project_id": "iws-mobile-bde07",
+    "storage_bucket": "iws-mobile-bde07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47736175417:android:a99e0113bdfe6867cbc6e8",
+        "android_client_info": {
+          "package_name": "com.iws.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47736175417-pkhfpr6jmknjqd2ek9bj00re531i3alu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD82OKnuFZ9lzGnvq-_jqSsYYuvgXLRCvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47736175417-pkhfpr6jmknjqd2ek9bj00re531i3alu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
