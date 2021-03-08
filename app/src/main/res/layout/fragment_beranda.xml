@@ -31,11 +31,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <VideoView
+                    android:id="@+id/vv_beranda"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:minHeight="192dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="16 :9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <com.smarteist.autoimageslider.SliderView
                     android:id="@+id/slider_beranda_top"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +55,19 @@
 
                 </com.smarteist.autoimageslider.SliderView>
 
+                <View
+                    android:id="@+id/view34"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.5"
+                    android:background="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageView
-                    android:id="@+id/imageView12"
+                    android:id="@+id/img_beranda_paket"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:layout_marginTop="16dp"
@@ -66,7 +89,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView"
+                    android:id="@+id/img_beranda_profil"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="16dp"
@@ -76,56 +99,60 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView"
-                    style="@style/iws.Small"
+                    android:id="@+id/tv_beranda_nama"
+                    style="@style/iws.Large"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:text="Moch. Nasir Gustaf"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+                    app:layout_constraintTop_toBottomOf="@+id/img_beranda_profil" />
 
                 <TextView
-                    android:id="@+id/textView2"
-                    style="@style/iws.Small3"
+                    android:id="@+id/tv_beranda_bvamount"
+                    style="@style/iws.Small"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:text="5000 BV"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_beranda_nama" />
 
                 <TextView
-                    android:id="@+id/textView3"
-                    style="@style/iws.Small3"
+                    android:id="@+id/tv_beranda_username"
+                    style="@style/iws.Small"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:text="IWS0000001"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_beranda_bvamount" />
 
                 <TextView
-                    android:id="@+id/textView5"
-                    style="@style/iws.Small3"
+                    android:id="@+id/tv_beranda_tgljoin"
+                    style="@style/iws.Small"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="20dp"
                     android:text="13 Januari 2021"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_beranda_username"
                     app:layout_constraintVertical_bias="0.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -343,6 +370,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -391,6 +419,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -439,6 +468,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -487,6 +517,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -535,6 +566,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -580,6 +612,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -626,6 +659,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -671,6 +705,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -716,6 +751,7 @@
                         android:layout_marginEnd="12dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -763,7 +799,8 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_dash_notifbintang_oranye"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -799,6 +836,7 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_notif_new"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="@+id/textView24"
                     app:layout_constraintStart_toEndOf="@+id/textView24"
                     app:layout_constraintTop_toTopOf="@+id/textView24"

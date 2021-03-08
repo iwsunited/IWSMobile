@@ -23,7 +23,7 @@ public class MyFirebaseIDService extends FirebaseMessagingService {
 
     private void updateToken(String token){
         //disini update tokennya di database
-        Call<Void> call = CommonMethod.getJsonApi_test().settoken(token);
+        Call<Void> call = CommonMethod.getJsonApiMemberIws().setToken(token, "10", "admin");
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {

@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         initView();
         onClick();
         setFlContainer();
-        setToken();
+//        setToken();
     }
 
     private void setToken(){
@@ -62,18 +62,20 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<InstanceIdResult> task) {
                         Log.d(TAG, "onComplete: jalan");
                         String token = task.getResult().getToken();
-                        Log.d(TAG, "onComplete: token : " + token);
+                        String userId = "10";
+                        String userType = "admin";
 
-                        Call<Void> call = CommonMethod.getJsonApi_test().settoken(token);
+                        Call<Void> call = CommonMethod.getJsonApiMemberIws().setToken(token, userId, userType);
                         call.enqueue(new Callback<Void>() {
                             @Override
                             public void onResponse(Call<Void> call, Response<Void> response) {
-                                Log.d(TAG, "onResponse: jalan token : " + token);
+                                Toast.makeText(MainActivity.this, "success token : " + token, Toast.LENGTH_SHORT).show();
+                                Log.d(TAG, "onResponse: token : " + token);
                             }
 
                             @Override
                             public void onFailure(Call<Void> call, Throwable t) {
-                                Log.d(TAG, "onFailure: jalan message : " + t.getMessage());
+                                Toast.makeText(MainActivity.this, "failed msg : " + t.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -186,6 +188,8 @@ public class MainActivity extends AppCompatActivity {
         clBarTopLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getSharedPreferences(CommonMethod.PREF_KEY, 0).edit().clear().commit();
+
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
