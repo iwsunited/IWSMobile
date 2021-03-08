@@ -22,9 +22,6 @@ public class DetailBarangActivity extends AppCompatActivity {
         slider = findViewById(R.id.sv_detail_barang);
         adapter = new DetailBarangSliderAdapter(this);
 
-        adapter.addItem(new SliderItem(R.drawable.slider_test_1));
-        adapter.addItem(new SliderItem(R.drawable.slider_test_2));
-        adapter.addItem(new SliderItem(R.drawable.slider_test_3));
         slider.setSliderAdapter(adapter);
         slider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         slider.setScrollTimeInSec(4);

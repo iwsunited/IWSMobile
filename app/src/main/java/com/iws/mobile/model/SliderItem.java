@@ -14,18 +14,4 @@ public class SliderItem {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
-
-    private int imageId;
-
-    public SliderItem(int imageId){
-        this.imageId = imageId;
-    }
-
-    public int getImageId() {
-        return imageId;
-    }
-
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
-    }
 }

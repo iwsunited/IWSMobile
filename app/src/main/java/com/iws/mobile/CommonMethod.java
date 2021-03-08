@@ -42,33 +42,8 @@ public class CommonMethod {
     }
 
     public static JsonApi getJsonApiMemberIws() {
-//        ConnectionSpec spec = new
-//                ConnectionSpec.Builder(ConnectionSpec.MODERN_TLS)
-//                .tlsVersions(TlsVersion.TLS_1_2)
-//                .cipherSuites(
-//                        CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
-//                        CipherSuite.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
-//                        CipherSuite.TLS_DHE_RSA_WITH_AES_128_GCM_SHA256)
-//                .build();
-//
-//        OkHttpClient client = new OkHttpClient.Builder()
-//                .connectionSpecs(Collections.singletonList(spec))
-//                .build();
-
-        OkHttpClient client = new OkHttpClient();
-        try {
-            client = new OkHttpClient.Builder()
-                    .sslSocketFactory(new TLSSocketFactory())
-                    .build();
-        } catch (KeyManagementException e) {
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://member.iwsunited.co.id/")
-                .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -54,10 +54,6 @@ public class DetailBarangSliderAdapter extends SliderViewAdapter<DetailBarangSli
 //                .fitCenter()
 //                .into(viewHolder.imageViewBackground);
 
-        Glide.with(viewHolder.itemView)
-                .load(sliderItem.getImageId())
-                .into(viewHolder.imageViewBackground);
-
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

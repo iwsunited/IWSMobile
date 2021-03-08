@@ -17,6 +17,16 @@ public interface JsonApi {
     @POST("login.php")
     Call<ResponseBody> login(@Field("username") String username, @Field("password") String password);
 
+    @GET("sliderberanda.php")
+    Call<ResponseBody> getSliderBeranda();
+
+    @GET("bonus.php")
+    Call<ResponseBody> bonus(@Query("page") String page,
+                             @Query("userid") String userid,
+                             @Query("startdate") String startdate,
+                             @Query("enddate") String enddate,
+                             @Query("showentries") String showentries);
+
     @FormUrlEncoded
     @POST("android/setToken")
     Call<Void> setToken(@Field("user_token") String user_token, @Field("user_id") String user_id, @Field("user_type") String user_type);

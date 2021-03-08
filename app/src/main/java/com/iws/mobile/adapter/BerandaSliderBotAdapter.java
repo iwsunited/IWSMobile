@@ -51,21 +51,10 @@ public class BerandaSliderBotAdapter extends SliderViewAdapter<BerandaSliderBotA
 
         SliderItem sliderItem = mSliderItems.get(position);
 
-//        Glide.with(viewHolder.itemView)
-//                .load(sliderItem.getImageUrl())
-//                .fitCenter()
-//                .into(viewHolder.imageViewBackground);
-
         Glide.with(viewHolder.itemView)
-                .load(sliderItem.getImageId())
+                .load("https://member.iwsunited.co.id/assets/uploads/slide/" + sliderItem.getImageUrl())
+                .fitCenter()
                 .into(viewHolder.imageViewBackground);
-
-        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "slider bot beranda " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override

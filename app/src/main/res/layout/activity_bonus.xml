@@ -26,7 +26,32 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textView155"
+            android:id="@+id/tv_bonus_bonusditransfer"
+            style="@style/iws.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="TextView"
+            android:textColor="@color/oranye"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_bonus_bonusbelumditansfer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView124" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/iws.Small2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Bonus Belum Ditransfer : "
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_bonus_bonusbelumditansfer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_bonus_bonusbelumditansfer" />
+
+        <TextView
+            android:id="@+id/tv_bonus_bonusbelumditansfer"
             style="@style/iws.Medium"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -37,7 +62,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tv_bonus_pageback"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView154" />
+            app:layout_constraintStart_toEndOf="@+id/textView" />
 
         <TextView
             android:id="@+id/textView150"
@@ -111,11 +136,11 @@
             android:text="Total Bonus Hari Ini :"
             android:textColor="@color/oranye"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView124"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_bonus_hariini"
             app:layout_constraintEnd_toEndOf="@+id/textView123"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView124" />
+            app:layout_constraintTop_toTopOf="@+id/tv_bonus_hariini" />
 
         <TextView
             android:id="@+id/textView123"
@@ -126,36 +151,36 @@
             android:text="Total Bonus Bulan Ini :"
             android:textColor="@color/oranye"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView135"
-            app:layout_constraintEnd_toStartOf="@+id/textView135"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_bonus_bulanini"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_bulanini"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView135" />
+            app:layout_constraintTop_toTopOf="@+id/tv_bonus_bulanini" />
 
         <TextView
-            android:id="@+id/textView124"
+            android:id="@+id/tv_bonus_hariini"
             style="@style/iws.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Rp. 2.000.000"
+            android:text="Rp. 0"
             android:textColor="@color/oranye"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView135"
+            android:id="@+id/tv_bonus_bulanini"
             style="@style/iws.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Rp. 10.000.000"
+            android:text="Rp. 0"
             android:textColor="@color/oranye"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView124" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_bonus_hariini" />
 
         <View
             android:id="@+id/view30"
@@ -167,7 +192,7 @@
             android:background="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView135" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_bonus_bulanini" />
 
         <TextView
             android:id="@+id/textView136"
@@ -234,29 +259,27 @@
             android:text="Rincian Bonus"
             android:textColor="@color/oranye"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView140"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_bonus_username"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/textView139"
+            android:id="@+id/tv_bonus_nama"
             style="@style/iws.Small2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Moch. Nasif Gustav"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spn_bonus_angka" />
 
         <TextView
-            android:id="@+id/textView140"
+            android:id="@+id/tv_bonus_username"
             style="@style/iws.Small3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="IWS0000001"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView139" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_bonus_nama" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout47"
@@ -315,10 +338,12 @@
             android:fillViewport="true"
             android:overScrollMode="never"
             android:scrollbarSize="0dp"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/view33"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view32">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -329,8 +354,10 @@
                     android:layout_height="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
@@ -443,18 +470,6 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView152"
             app:layout_constraintEnd_toStartOf="@+id/textView152" />
 
-        <TextView
-            android:id="@+id/textView154"
-            style="@style/iws.Small2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Semua Bonus :  "
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView155"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView155" />
-
         <View
             android:id="@+id/view33"
             android:layout_width="0dp"
@@ -463,9 +478,50 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:background="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/textView155"
+            app:layout_constraintBottom_toTopOf="@+id/tv_bonus_bonusterbentuk"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView124"
+            style="@style/iws.Small2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonus Ditransfer : "
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_bonus_bonusditransfer"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_bonus_bonusditransfer" />
+
+        <TextView
+            android:id="@+id/textView139"
+            style="@style/iws.Small2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Bonus Terbentuk : "
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_bonus_bonusterbentuk"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_bonusditransfer"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_bonus_bonusterbentuk" />
+
+        <TextView
+            android:id="@+id/tv_bonus_bonusterbentuk"
+            style="@style/iws.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="TextView"
+            android:textColor="@color/oranye"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_bonus_bonusditransfer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView139" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

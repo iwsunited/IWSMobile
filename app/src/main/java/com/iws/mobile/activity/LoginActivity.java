@@ -137,6 +137,7 @@ public class LoginActivity extends AppCompatActivity {
                         JSONObject result = hasil.getJSONObject("data");
 
                         String secure_username = result.getString("secure_username");
+                        String secure_id = result.getString("secure_id");
                         String member_nama = result.getString("member_nama");
                         String member_email = result.getString("member_email");
                         String member_kelamin = result.getString("member_kelamin");
@@ -176,6 +177,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         editor.putBoolean("login_status", true);
                         editor.putString("secure_username", secure_username);
+                        editor.putString("secure_id", secure_id);
                         editor.putString("member_nama", member_nama);
                         editor.putString("member_email", member_email);
                         editor.putString("member_kelamin", member_kelamin);
@@ -207,13 +209,6 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString("paket_nama", paket_nama);
 
                         editor.apply();
-
-                        Log.d(TAG, "loadData: login status : " + pref.getBoolean("login_status", false));
-                        Log.d(TAG, "loadData: foto : " + pref.getString("member_foto", ""));
-                        Log.d(TAG, "loadData: nama : " + pref.getString("member_nama", ""));
-                        Log.d(TAG, "loadData: bv : " + pref.getString("bv_amount", ""));
-                        Log.d(TAG, "loadData: username : " + pref.getString("secure_username", ""));
-                        Log.d(TAG, "loadData: tgl : " + pref.getString("member_tanggal_join", ""));
 
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
