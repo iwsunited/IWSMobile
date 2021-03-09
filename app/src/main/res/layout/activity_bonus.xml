@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="TextView"
+            android:text="Rp. 0"
             android:textColor="@color/oranye"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tv_bonus_bonusbelumditansfer"
@@ -56,26 +56,28 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="24dp"
-            android:text="Rp. 1.000.000.000"
+            android:layout_marginBottom="52dp"
+            android:text="Rp. 0"
             android:textColor="@color/oranye"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tv_bonus_pageback"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView" />
 
         <TextView
-            android:id="@+id/textView150"
+            android:id="@+id/tv_bonus_page3"
             style="@style/iws.Small2"
             android:layout_width="28dp"
             android:layout_height="20dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/bg_pertjaringan_kotak_oranye"
             android:gravity="center"
             android:text="100"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView149"
-            app:layout_constraintEnd_toStartOf="@+id/textView149" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_page4" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout69"
@@ -195,62 +197,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_bonus_bulanini" />
 
         <TextView
-            android:id="@+id/textView136"
-            style="@style/iws.Small2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Tahun :"
-            android:textColor="@color/oranye"
-            app:layout_constraintBottom_toBottomOf="@+id/spn_bonus_tahun"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/spn_bonus_tahun" />
-
-        <Spinner
-            android:id="@+id/spn_bonus_tahun"
-            android:layout_width="40dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/oranye"
-            app:layout_constraintStart_toEndOf="@+id/textView136"
-            app:layout_constraintTop_toBottomOf="@+id/view30" />
-
-        <TextView
-            android:id="@+id/textView137"
-            style="@style/iws.Small2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Bulan :"
-            android:textColor="@color/oranye"
-            app:layout_constraintBottom_toBottomOf="@+id/spn_bonus_tahun"
-            app:layout_constraintStart_toEndOf="@+id/spn_bonus_tahun"
-            app:layout_constraintTop_toTopOf="@+id/spn_bonus_tahun" />
-
-        <Spinner
-            android:id="@+id/spn_bonus_bulan"
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@color/oranye"
-            app:layout_constraintEnd_toStartOf="@+id/spn_bonus_angka"
-            app:layout_constraintStart_toEndOf="@+id/textView137"
-            app:layout_constraintTop_toBottomOf="@+id/view30" />
-
-        <Spinner
-            android:id="@+id/spn_bonus_angka"
-            android:layout_width="40dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/oranye"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view30" />
-
-        <TextView
             android:id="@+id/textView138"
             style="@style/iws.Small2"
             android:layout_width="wrap_content"
@@ -265,12 +211,16 @@
         <TextView
             android:id="@+id/tv_bonus_nama"
             style="@style/iws.Small2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:textAlignment="textEnd"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spn_bonus_angka" />
+            app:layout_constraintStart_toEndOf="@+id/textView138"
+            app:layout_constraintTop_toBottomOf="@+id/spn_entries"
+            tools:text="test" />
 
         <TextView
             android:id="@+id/tv_bonus_username"
@@ -362,113 +312,93 @@
         </ScrollView>
 
         <TextView
-            android:id="@+id/textView129"
+            android:id="@+id/tv_bonus_next"
             style="@style/iws.Small2"
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_pertjaringan_kotak_oranye"
-            android:gravity="center"
-            android:text="Selanjutnya"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView146" />
-
-        <TextView
-            android:id="@+id/textView146"
-            style="@style/iws.Small2"
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/bg_pertjaringan_kotak_oranye"
-            android:gravity="center"
-            android:text="Kembali"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView129"
-            app:layout_constraintEnd_toStartOf="@+id/textView129"
-            app:layout_constraintStart_toStartOf="@+id/tv_bonus_pageback" />
-
-        <TextView
-            android:id="@+id/textView147"
-            style="@style/iws.Small2"
-            android:layout_width="28dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/bg_pertjaringan_kotak_oranye"
             android:gravity="center"
             android:text=">"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/textView129"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_bonus_bonusbelumditansfer" />
 
         <TextView
-            android:id="@+id/textView148"
+            android:id="@+id/tv_bonus_page5"
             style="@style/iws.Small2"
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/bg_pertjaringan_kotak_oranye"
             android:gravity="center"
             android:text="100"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView147"
-            app:layout_constraintEnd_toStartOf="@+id/textView147" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_next" />
 
         <TextView
-            android:id="@+id/textView149"
+            android:id="@+id/tv_bonus_page4"
             style="@style/iws.Small2"
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/bg_pertjaringan_kotak_oranye"
             android:gravity="center"
             android:text="100"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView148"
-            app:layout_constraintEnd_toStartOf="@+id/textView148" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_page5" />
 
         <TextView
-            android:id="@+id/textView151"
+            android:id="@+id/tv_bonus_page2"
             style="@style/iws.Small2"
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/bg_pertjaringan_kotak_oranye"
             android:gravity="center"
             android:text="100"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView150"
-            app:layout_constraintEnd_toStartOf="@+id/textView150" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_page3" />
 
         <TextView
-            android:id="@+id/textView152"
+            android:id="@+id/tv_bonus_page1"
             style="@style/iws.Small2"
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/bg_pertjaringan_kotak_oranye"
             android:gravity="center"
             android:text="100"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView151"
-            app:layout_constraintEnd_toStartOf="@+id/textView151" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_page2" />
 
         <TextView
-            android:id="@+id/tv_bonus_pageback"
+            android:id="@+id/tv_bonus_prev"
             style="@style/iws.Small2"
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/bg_pertjaringan_kotak_oranye"
             android:gravity="center"
             android:text="100"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView152"
-            app:layout_constraintEnd_toStartOf="@+id/textView152" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bonus_page1" />
 
         <View
             android:id="@+id/view33"
@@ -516,12 +446,73 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="TextView"
+            android:text="Rp. 0"
             android:textColor="@color/oranye"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tv_bonus_bonusditransfer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView139" />
+
+        <EditText
+            android:id="@+id/edt_bonus_startdate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@color/abuabumuda"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/spn_entries"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view30"
+            tools:text="01-01-2019" />
+
+        <EditText
+            android:id="@+id/edt_bonus_enddate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/abuabumuda"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            tools:text="01-01-2020" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="s/d"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_bonus_startdate"
+            app:layout_constraintStart_toEndOf="@+id/edt_bonus_startdate"
+            app:layout_constraintTop_toTopOf="@+id/edt_bonus_startdate" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/iws.Small3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Show entries"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/spn_entries"
+            app:layout_constraintTop_toBottomOf="@+id/view30" />
+
+        <Spinner
+            android:id="@+id/spn_entries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
